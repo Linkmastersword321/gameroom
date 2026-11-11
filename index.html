@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#090817">
-<meta name="description" content="Play free browser games at GAMEROOM. Enjoy shooters, RPG adventures, sandbox building, open-world exploration, action games, puzzles and more. No downloads required.">
+<meta name="description" content="Play free browser games at GAMEROOM, including high school math games for algebra, slope, factoring, and functions. Learn math through fun challenges.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://linkmastersword321.github.io/gameroom/">
 <meta property="og:type" content="website">
@@ -47,13 +47,13 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding:25px 0 35px;colo
 .contribute-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.contribute-links a{color:#9edfff;border:1px solid #3a5682;border-radius:10px;padding:10px 13px;text-decoration:none}
 @media(max-width:600px){.extra-section{padding:17px;margin:30px 0}.creator-form{grid-template-columns:1fr}.creator-form .wide{grid-column:auto}.touch-pad{min-height:175px;font-size:24px}}
 
-.genre-grid,.free-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:16px}.genre-card,.free-game{padding:15px;background:#0d1024;border:1px solid #34315b;border-radius:14px}.genre-card h3{margin:5px 0}.genre-card p,.free-game p{color:var(--muted);font-size:13px}.genre-card button{background:linear-gradient(100deg,var(--purple),#536cff);color:white;border:0;border-radius:9px;padding:10px;font-weight:800}.free-game a{color:#a8e4ff;font-weight:850;text-decoration:none}.game-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px}.game-controls button{background:#211b42;color:white;border:1px solid #61519a;border-radius:10px;padding:12px 16px;touch-action:manipulation}@media(max-width:600px){.genre-grid,.free-list{grid-template-columns:1fr 1fr}}</style>
+.genre-grid,.free-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:16px}.genre-card,.free-game{padding:15px;background:#0d1024;border:1px solid #34315b;border-radius:14px}.genre-card h3{margin:5px 0}.genre-card p,.free-game p{color:var(--muted);font-size:13px}.genre-card button{background:linear-gradient(100deg,var(--purple),#536cff);color:white;border:0;border-radius:9px;padding:10px;font-weight:800}.free-game a{color:#a8e4ff;font-weight:850;text-decoration:none}.game-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px}.game-controls button{background:#211b42;color:white;border:1px solid #61519a;border-radius:10px;padding:12px 16px;touch-action:manipulation}@media(max-width:600px){.genre-grid,.free-list{grid-template-columns:1fr 1fr}}.math-hud{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#c9c0ed;font-size:13px}.math-question{font-size:clamp(19px,3vw,25px);margin:20px 0}.math-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:620px;margin:16px auto}.math-choice{min-height:52px;padding:10px;background:#211b42;color:white;border:1px solid #61519a;border-radius:11px;font-weight:800}.math-choice:hover:not(:disabled){background:#392765;border-color:#42c8ff}.math-choice:disabled{opacity:.8}.math-choices button{font-size:15px}#mathNext{margin-top:12px}@media(max-width:420px){.math-choices{grid-template-columns:1fr}}</style>
 </head>
 <body>
-<header><div class="wrap nav"><div class="brand">GAME<span>ROOM</span></div><nav class="navlinks"><a href="#games">Games</a><a href="#mobile-games">Mobile</a><a href="#creator">Create</a><a href="#new-genres">Genres</a><a href="#free-games">Free games</a><a href="#community">Community</a><a href="#about">About</a></nav><div class="pill">✦ 100% FREE TO PLAY</div></div></header>
+<header><div class="wrap nav"><div class="brand">GAME<span>ROOM</span></div><nav class="navlinks"><a href="#games">Games</a><a href="#mobile-games">Mobile</a><a href="#creator">Create</a><a href="#new-genres">Genres</a><a href="#math-lab">Math Lab</a><a href="#free-games">Free games</a><a href="#community">Community</a><a href="#about">About</a></nav><div class="pill">✦ 100% FREE TO PLAY</div></div></header>
 <main class="wrap">
 <section class="hero"><div><div class="eyebrow">Your next favorite game is here</div><h1>PLAY MORE.<br><em>PAY NOTHING.</em></h1><p>Welcome to GAMEROOM — your neon-lit corner of the internet for quick, fun, free games. Pick a game and jump right in.</p><div class="hero-actions"><button class="primary" onclick="document.querySelector('#games').scrollIntoView({behavior:'smooth'})">Explore games ↘</button><button class="secondary" onclick="openGame('clicker')">⚡ Try Click Rush</button></div></div><div class="hero-art"><span class="float f1">NO DOWNLOADS</span><div class="controller">🎮</div><span class="float f2">ALL PLAY. NO PAY.</span></div></section>
-<div class="stats"><div class="stat"><b>14</b> mini-games</div><div class="stat"><b>$0</b> to play</div><div class="stat"><b>0</b> downloads needed</div><div class="stat">✨ <b>Made for everyone</b></div></div>
+<div class="stats"><div class="stat"><b>18</b> mini-games</div><div class="stat"><b>$0</b> to play</div><div class="stat"><b>0</b> downloads needed</div><div class="stat">✨ <b>Made for everyone</b></div></div>
 <section id="games"><div class="section-head"><div><div class="eyebrow">Choose your challenge</div><h2>Game library</h2><p>Find a game, hit play, and have fun.</p></div><input id="search" class="search" placeholder="🔎 Search games..." oninput="renderGames()"></div>
 <div class="filters" id="filters"><button class="filter active" data-cat="All">All games</button><button class="filter" data-cat="Arcade">Arcade</button><button class="filter" data-cat="Puzzle">Puzzle</button><button class="filter" data-cat="Classic">Classic</button></div>
 <div class="grid" id="gameGrid"></div></section>
@@ -89,6 +89,19 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding:25px 0 35px;colo
 <article class="genre-card"><div class="big">🧱</div><h3>Pixel Sandbox</h3><p>Sandbox · Build a little world with different blocks.</p><button onclick="launchGenreGame('sandbox')">Build world</button></article>
 <article class="genre-card"><div class="big">🗺️</div><h3>Wildwood Explorer</h3><p>Open-world · Explore a map and discover hidden crystals.</p><button onclick="launchGenreGame('open')">Explore</button></article>
 <article class="genre-card"><div class="big">⚔️</div><h3>Forest Rescue</h3><p>Action/adventure · Fight forest creatures and rescue a sprite.</p><button onclick="launchGenreGame('action')">Start quest</button></article></div></section>
+
+<section class="extra-section" id="math-lab">
+ <div class="eyebrow">Train your brain</div>
+ <h2>🧠 GAMEROOM Math Lab</h2>
+ <p>High-school math practice disguised as games. Build skills in algebra, coordinate geometry, quadratics, and functions. Every answer includes an explanation.</p>
+ <div class="genre-grid">
+  <article class="genre-card"><div class="big">⚡</div><h3>Algebra Blitz</h3><p>Solve one-step and two-step linear equations. Find x before the next challenge!</p><button onclick="launchMathGame('algebra')">Play Algebra Blitz</button></article>
+  <article class="genre-card"><div class="big">📈</div><h3>Slope Sprint</h3><p>Find the slope between two points and sharpen your coordinate-geometry skills.</p><button onclick="launchMathGame('slope')">Play Slope Sprint</button></article>
+  <article class="genre-card"><div class="big">✖️</div><h3>Factor Frenzy</h3><p>Factor quadratic trinomials with integer factors. Spot the pair that makes the equation work.</p><button onclick="launchMathGame('factor')">Play Factor Frenzy</button></article>
+  <article class="genre-card"><div class="big">ƒ(x)</div><h3>Function Frenzy</h3><p>Substitute values into linear and simple quadratic functions to find the output.</p><button onclick="launchMathGame('function')">Play Function Frenzy</button></article>
+ </div>
+ <p class="muted">Tip: Try to explain each step to yourself. Understanding the method matters more than speed!</p>
+</section>
 <section class="extra-section" id="free-games"><div class="eyebrow">Publisher links</div><h2>Famous free-to-play games</h2><p>These are official external game pages, not copies hosted by GAMEROOM. Free-to-play titles may offer optional purchases and platform availability varies.</p><div class="free-list">
 <article class="free-game"><a href="https://www.fortnite.com/" target="_blank" rel="noopener">Fortnite ↗</a><p>Battle royale and creative experiences</p></article>
 <article class="free-game"><a href="https://www.rocketleague.com/" target="_blank" rel="noopener">Rocket League ↗</a><p>Arcade car soccer</p></article>
@@ -148,6 +161,62 @@ function assistGameIdea(){const idea=document.getElementById('ideaInput').value.
 function createFromIdea(){const idea=document.getElementById('ideaInput').value.trim();if(!idea){assistGameIdea();return}const low=idea.toLowerCase();const type=/(quiz|trivia|question)/.test(low)?'quiz':/(click|tap|collect|star|coin|dodge|avoid)/.test(low)?'tap':'click';createCustomGame({name:(idea.split(/[.!?]/)[0].slice(0,28)||'My Idea Game'),type,prompt:idea,answer:'10',emoji:/(space|star|planet)/.test(low)?'🚀':'🎮'});document.getElementById('creator').scrollIntoView({behavior:'smooth'})}
 renderCustomGames();
 
+
+
+function launchMathGame(kind){
+ if(cleanup){cleanup();cleanup=null}
+ const modal=document.getElementById('modal'),area=document.getElementById('gameArea'),title=document.getElementById('gameTitle');
+ const names={algebra:'Algebra Blitz',slope:'Slope Sprint',factor:'Factor Frenzy',function:'Function Frenzy'};
+ title.textContent=names[kind]+' · Math Lab';modal.classList.add('open');
+ let score=0,streak=0,round=0,answer=0,explanation='',question='';
+ area.innerHTML='<div class="math-hud"><b id="mathScore">Score: 0</b><b id="mathRound">Question: 1</b><b id="mathStreak">Streak: 0 🔥</b></div><h3 id="mathQuestion" class="math-question"></h3><div id="mathChoices" class="math-choices"></div><p id="mathFeedback" class="helper-output" aria-live="polite">Choose an answer to see how to solve it.</p><button id="mathNext" class="primary" disabled>Next question →</button>';
+ const qEl=area.querySelector('#mathQuestion'),choices=area.querySelector('#mathChoices'),feedback=area.querySelector('#mathFeedback'),next=area.querySelector('#mathNext');
+ function makeChoices(correct){
+   const set=new Set([correct]);let attempts=0;
+   while(set.size<4&&attempts++<100){let d=1+Math.floor(Math.random()*Math.max(4,Math.abs(correct)*0.35+4));let v=correct+(Math.random()<.5?-d:d);set.add(v)}
+   return [...set].sort(()=>Math.random()-.5);
+ }
+ function generate(){
+  round++;let a,b,x,y;
+  if(kind==='algebra'){
+   a=2+Math.floor(Math.random()*8);x=-8+Math.floor(Math.random()*17);b=-12+Math.floor(Math.random()*25);y=a*x+b;answer=x;
+   question='Solve for x:  '+a+'x '+(b<0?'− '+Math.abs(b):'+ '+b)+' = '+y+'.';
+   explanation=a+'x '+(b<0?'− '+Math.abs(b):'+ '+b)+' = '+y+'. Add or subtract '+Math.abs(b)+' to isolate '+a+'x, then divide by '+a+'. So x = '+x+'.';
+  }else if(kind==='slope'){
+   x=-6+Math.floor(Math.random()*13);y=-6+Math.floor(Math.random()*13);a=1+Math.floor(Math.random()*5);b=-5+Math.floor(Math.random()*11);if(b===0)b=2;
+   const x2=x+a,y2=y+b;answer=b/a;
+   question='Find the slope between ('+x+', '+y+') and ('+x2+', '+y2+'). Give a simplified fraction or whole number.';
+   const gcd=(m,n)=>n?gcd(n,m%n):Math.abs(m);const g=gcd(Math.abs(b),a);const frac=(b/g)+'/'+(a/g);
+   const display=Number.isInteger(answer)?String(answer):frac;answer=display;
+   explanation='Slope = change in y ÷ change in x = ('+y2+' − ('+y+')) ÷ ('+x2+' − ('+x+')) = '+b+'/'+a+' = '+display+'.';
+  }else if(kind==='factor'){
+   a=1+Math.floor(Math.random()*9);b=1+Math.floor(Math.random()*9);if(Math.random()<.5)a=-a;if(Math.random()<.5)b=-b;
+   const sum=a+b,prod=a*b;answer=[a,b].sort((m,n)=>m-n).join(',');
+   question='Factor this quadratic: x² '+(sum<0?'− '+Math.abs(sum):'+ '+sum)+'x '+(prod<0?'− '+Math.abs(prod):'+ '+prod)+'.';
+   explanation='Find two numbers that multiply to '+prod+' and add to '+sum+'. They are '+a+' and '+b+'. Therefore the factors are (x '+(a<0?'− '+Math.abs(a):'+ '+a)+')(x '+(b<0?'− '+Math.abs(b):'+ '+b)+').';
+  }else{
+   a=-5+Math.floor(Math.random()*11);if(a===0)a=3;b=-8+Math.floor(Math.random()*17);x=-5+Math.floor(Math.random()*11);
+   if(Math.random()<.5){answer=a*x+b;question='If f(x) = '+a+'x '+(b<0?'− '+Math.abs(b):'+ '+b)+', what is f('+x+')?';explanation='Substitute '+x+' for x: f('+x+') = '+a+'('+x+') '+(b<0?'− '+Math.abs(b):'+ '+b)+' = '+(a*x)+' '+(b<0?'− '+Math.abs(b):'+ '+b)+' = '+answer+'.'}
+   else{answer=a*x*x+b;question='If f(x) = '+a+'x² '+(b<0?'− '+Math.abs(b):'+ '+b)+', what is f('+x+')?';explanation='Substitute '+x+' for x: f('+x+') = '+a+' × '+x+'² '+(b<0?'− '+Math.abs(b):'+ '+b)+' = '+(a*x*x)+' '+(b<0?'− '+Math.abs(b):'+ '+b)+' = '+answer+'.'}
+  }
+  qEl.textContent=question;choices.innerHTML='';feedback.textContent='Choose an answer. You can take your time!';next.disabled=true;
+  let vals;
+  if(kind==='slope'){
+   const correct=answer;const [n,d]=correct.split('/').map(Number);const num=Number.isInteger(Number(correct))?Number(correct):n/d;
+   vals=[correct];let offsets=[1,-1,2,-2,0.5,-0.5];for(const off of offsets){let v=num+off;let label=Number.isInteger(v)?String(v):String(v);if(!vals.includes(label))vals.push(label);if(vals.length===4)break}
+   vals=vals.slice(0,4).sort(()=>Math.random()-.5);
+  }else if(kind==='factor'){
+   const correct=answer;const [p,q]=correct.split(',').map(Number);
+   vals=[correct,[p+1,q+1].sort((m,n)=>m-n).join(','),[p-1,q+1].sort((m,n)=>m-n).join(','),[p+2,q-1].sort((m,n)=>m-n).join(',')];
+   vals=[...new Set(vals)];while(vals.length<4){vals.push([p+vals.length,q-vals.length].sort((m,n)=>m-n).join(','))}
+   vals=vals.slice(0,4).sort(()=>Math.random()-.5);
+  }else{vals=makeChoices(answer)}
+  vals.forEach(v=>{let btn=document.createElement('button');btn.className='math-choice';btn.textContent=kind==='factor'?'(x '+(v.split(',')[0]<0?'− '+Math.abs(v.split(',')[0]):'+ '+v.split(',')[0])+')(x '+(v.split(',')[1]<0?'− '+Math.abs(v.split(',')[1]):'+ '+v.split(',')[1])+')':String(v);btn.onclick=()=>{[...choices.children].forEach(b=>b.disabled=true);const ok=String(v)===String(answer);if(ok){score+=10+Math.min(streak,5)*2;streak++;feedback.textContent='✨ Exactly right! '+explanation}else{streak=0;feedback.textContent='Not quite. The correct answer is '+(kind==='factor'?'(x '+(answer.split(',')[0]<0?'− '+Math.abs(answer.split(',')[0]):'+ '+answer.split(',')[0])+')(x '+(answer.split(',')[1]<0?'− '+Math.abs(answer.split(',')[1]):'+ '+answer.split(',')[1])+')':answer)+'. '+explanation}area.querySelector('#mathScore').textContent='Score: '+score;area.querySelector('#mathStreak').textContent='Streak: '+streak+' 🔥';next.disabled=false;next.focus()};choices.append(btn)});
+  area.querySelector('#mathRound').textContent='Question: '+round;
+ }
+ next.onclick=generate;generate();
+ cleanup=()=>{};
+}
 
 function launchGenreGame(k){
  if(cleanup){cleanup();cleanup=null}const m=document.getElementById('modal'),a=document.getElementById('gameArea'),t=document.getElementById('gameTitle');m.classList.add('open');a.innerHTML='';
